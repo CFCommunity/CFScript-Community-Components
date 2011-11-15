@@ -3,24 +3,79 @@
 
 The components in this project are contributed by the ColdFusion community, for the ColdFusion Community.
 
-To install them, just copy them into (or clone this git repository as) `{cf-install}\CustomTags\com\adobe\coldfusion\`
+### Installing...
 
-> The following components ship with CF9 and CF9.01, and are _not_ part of this project:
->
-> * base.cfc
-> * dbinfo.cfc
-> * feed.cfc
-> * ftp.cfc
-> * http.cfc
-> * imap.cfc
-> * ldap.cfc
-> * mail.cfc
-> * pdf.cfc
-> * pop.cfc
-> * query.cfc
-> * result.cfc
-> * storedproc.cfc
-> * storedprocresult.cfc
+You can simply download the zip of the available components and toss them in the appropriate directory, if you want. (`{cf-install}\CustomTags\com\adobe\coldfusion\`)
+
+It would be easier to update if you use git:
+
+1. Open a terminal prompt at the above directory
+1. Run this: `git init;git remote add origin git@github.com:CFCommunity/CFScript-Community-Components.git;git pull`
+1. Any time you want to update, simply (go into that directory and) run `git pull`
+
+# Deficiencies!
+
+These are the tags that need to be ported over to script. Godspeed!
+
+## Significant omissions:
+
+* cfcollection 
+* cfexchangecalendar    
+* cfexchangeconnection  
+* cfexchangecontact      
+* cfexchangefilter      
+* cfexchangemail 
+* cfexchangetask 
+* cfexecute 
+* cfinvoke (support for dynamic method names, please!)
+* cfmodule 
+* cfoutput (implementation of query looping with grouping)
+* cfparam (fix the bug in that enforced requiredness doesn’t work (ie: param name="foo";))
+* cfquery (cachedwithin support)
+* cfsetting 
+* cfwddx 
+* cfzip 
+* cfzipparam
+
+## Reasonable case
+
+* cfassociate    
+* cfcache        
+* cfheader      
+* cflogin 
+* cfloginuser 
+* cflogout 
+* cfprint      
+* cfsharepoint  
+* cftimer
+
+## Ambivalent
+
+* cfgridupdate
+* cfinsert
+* cfobjectcache
+* cfreport
+* cfreportparam
+* cfupdate
+
+# Adobe owns...
+
+The following components ship with CF9 and CF9.01. Adobe holds copyright on them. They are _not_ part of this project, and are not included in the repository:
+
+* base.cfc
+* dbinfo.cfc
+* feed.cfc
+* ftp.cfc
+* http.cfc
+* imap.cfc
+* ldap.cfc
+* mail.cfc
+* pdf.cfc
+* pop.cfc
+* query.cfc
+* result.cfc
+* storedproc.cfc
+* storedprocresult.cfc
 
 # MIT License
 
