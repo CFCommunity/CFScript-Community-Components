@@ -39,7 +39,6 @@ These are the tags that need to be ported over to script. Godspeed!
 
 * cfassociate    
 * cfcache        
-* cfheader      
 * cflogin 
 * cfloginuser 
 * cflogout 
