@@ -32,7 +32,6 @@ These are the tags that need to be ported over to script. Godspeed!
 * cfparam (fix the bug in that enforced requiredness doesn’t work (ie: param name="foo";))
 * cfquery (cachedwithin support)
 * cfsetting 
-* cfwddx 
 * cfzip 
 * cfzipparam
 
