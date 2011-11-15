@@ -91,4 +91,4 @@ See also: [http://www.opensource.org/licenses/mit-license.html](http://www.opens
 
 # Hey Adobe!
 
-You are welcome, and encouraged, to ship these in future versions of ColdFusion. Please do. It'll make things better for everyone!
+You are welcome, and encouraged, to ship these in future versions of ColdFusion. Please do, at least where appropriate. In some cases it just doesn't look and feel right to use CFCs to make these features. When that's the case, they are included here only as a stop-gap so that we can _actually write full-script components_. Please, where it makes sense, still write the features in Java. But where this implementation looks and feels natural, by all means, run with it! It'll make life better for everyone!
