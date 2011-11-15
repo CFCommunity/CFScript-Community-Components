@@ -19,7 +19,6 @@ These are the tags that need to be ported over to script. Godspeed!
 
 ## Significant omissions:
 
-* cfcollection 
 * cfexchangecalendar    
 * cfexchangeconnection  
 * cfexchangecontact      

@@ -574,6 +574,60 @@
 				</cfif>  
                 <cfreturn tagResult>
 			</cfcase>		
+
+        	<!--- cfsearch service --->
+            <cfcase value="CFSEARCH">
+                <cfset var searchResult = {}>
+				<cfset var localname = "cfsearch_" & replace(createUUID(), "-","_","all")>
+				<cfif structKeyExists(tagAttributes, "status") and trim(tagAttributes["status"]) neq "">
+					<cfset var statusname = "cfsearchstatus_" & replace(createUUID(), "-","_","all")>
+					<cfset tagAttributes.status = "local.#statusname#">
+				</cfif>
+                <cfsearch attributeCollection="#tagAttributes#" name="local.#localname#">
+				<cfset searchResult.name = local[localname]>
+				<cfif structKeyExists(tagAttributes, "status") and trim(tagAttributes["status"]) neq "">
+					<cfset searchResult.status = local[statusname]>
+				</cfif>
+
+				<cfset tagResult.setResult(searchResult)>
+                <cfreturn tagResult>
+            </cfcase>
+
+        	<!--- cfindex service --->
+            <cfcase value="CFINDEX">
+                <cfset var indexResult = {}>
+				<cfif structKeyExists(tagAttributes, "status") and trim(tagAttributes["status"]) neq "">
+					<cfset var statusname = "cfsearchstatus_" & replace(createUUID(), "-","_","all")>
+					<cfset tagAttributes.status = "local.#statusname#">
+				</cfif>
+				<cfif structKeyExists(tagAttributes,"query")>
+					<cfset local.query = tagAttributes.query>
+					<cfset tagAttributes.query = "local.query">
+				</cfif>
+                <cfindex attributeCollection="#tagAttributes#">
+				<cfif structKeyExists(tagAttributes, "status") and trim(tagAttributes["status"]) neq "">
+					<cfset indexResult.status = local[statusname]>
+				</cfif>
+
+				<cfset tagResult.setResult(indexResult)>
+                <cfreturn tagResult>
+            </cfcase>
+
+        	<!--- cfcollection service --->
+            <cfcase value="CFCOLLECTION">
+                <cfset var colResult = {}>
+				<cfset var localname = "cfcollection_" & replace(createUUID(), "-","_","all")>
+				<cfif listFindNoCase("list,categoryList",tagAttributes.action)>
+					<cfset tagAttributes.name = "local.#localname#">
+				</cfif>
+                <cfcollection attributeCollection="#tagAttributes#">
+				<cfif structKeyExists(tagAttributes, "name")>
+					<cfset colResult.name = local[localname]>
+				</cfif>
+				<cfset tagResult.setResult(colResult)>
+                <cfreturn tagResult>
+            </cfcase>
+
 		</cfswitch>
 	</cffunction>
 </cfcomponent>
