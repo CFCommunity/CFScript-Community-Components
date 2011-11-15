@@ -1,5 +1,4 @@
 #these files all ship with CF9+CF9.01
-base.cfc
 dbinfo.cfc
 feed.cfc
 ftp.cfc
