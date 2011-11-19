@@ -55,9 +55,9 @@ These are the tags that need to be ported over to script. Godspeed!
 * cfreportparam
 * cfupdate
 
-# Adobe owns...
+# Adobe copyright...
 
-The following components ship with CF9 and CF9.01. Adobe holds copyright on them. They are _not_ part of this project, and are not included in the repository:
+The following components ship with CF9 and CF9.01. Adobe holds copyright on them, but has granted permission to modify and distribute under an unspecified license, the text of which is below the list. Unless modified to support additional functionality or fix any bugs that may arise, they are not included in this repository. Any time they are changed, you can be sure tremendous effort has been made to maintain compatibility and, unless noted somewhere in this readme, has been achieved.
 
 * base.cfc
 * dbinfo.cfc
@@ -74,15 +74,27 @@ The following components ship with CF9 and CF9.01. Adobe holds copyright on them
 * storedproc.cfc
 * storedprocresult.cfc
 
+## Adobe license
+
+This license text is taken from the components that ship with Adobe ColdFusion 9 and applies only to those components.
+
+>ADOBE CONFIDENTIAL
+>___________________
+>
+>Copyright 2008 Adobe Systems Incorporated
+>All Rights Reserved.
+>
+>NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the terms of the Adobe license agreement accompanying it.  If you have received this file from a source other than Adobe, then your use, modification, or distribution of it requires the prior written permission of Adobe.
+
 # MIT License
 
-Copyright (c) 2011 The ColdFusion Community
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+>Copyright (c) 2011 The ColdFusion Community
+>
+>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+>
+>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+>
+>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 See also: [http://www.opensource.org/licenses/mit-license.html](http://www.opensource.org/licenses/mit-license.html)
 
