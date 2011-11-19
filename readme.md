@@ -5,7 +5,7 @@ The components in this project are contributed by the ColdFusion community, for 
 
 ### Installing...
 
-You can simply download the zip of the available components and toss them in the appropriate directory, if you want. (`{cf-install}\CustomTags\com\adobe\coldfusion\`)
+You can simply [download the zip](https://github.com/CFCommunity/CFScript-Community-Components/zipball/master) of the available components and toss them in the appropriate directory, if you want. (`{cf-install}\CustomTags\com\adobe\coldfusion\`)
 
 It would be easier to update if you use git:
 
