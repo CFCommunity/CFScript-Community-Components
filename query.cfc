@@ -51,6 +51,7 @@ component extends="base"
     //constants
     variables.COMMA = ",";
     variables.RIGHTPARENTHESIS = ")";
+    variables.NEWLINE = chr(13) & chr(10);
     variables.SPACE = " ";
     variables.EMPTYSTRING = "";
     variables.SINGLEQUOTE= "'";
@@ -131,7 +132,7 @@ component extends="base"
         {
             for(i=2; i <= arraylen(sqlArray); i++)
             {
-                var delimters = SPACE & "," & COMMA & "," & RIGHTPARENTHESIS;
+                var delimters = SPACE & COMMA & RIGHTPARENTHESIS & NEWLINE;
                 namedparam = trim(listfirst(sqlArray[i],delimters));
                 sqlArray[i] = replace(arguments.sqlArray[i],namedparam,EMPTYSTRING);
                 sqlParams = insertNamedParams(namedparam,namedparamsarray,sqlParams,sql);
