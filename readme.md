@@ -10,7 +10,7 @@ You can simply [download the zip](https://github.com/CFCommunity/CFScript-Commun
 It would be easier to update if you use git:
 
 1. Open a terminal prompt at the above directory
-1. Run this: `git init;git remote add origin git@github.com:CFCommunity/CFScript-Community-Components.git;git pull`
+1. Run this: `git init;git remote add origin git://github.com/CFCommunity/CFScript-Community-Components.git;git pull`
 1. Any time you want to update, simply (go into that directory and) run `git pull`
 
 # Deficiencies!
