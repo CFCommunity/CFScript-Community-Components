@@ -18,6 +18,9 @@
 
     <cfscript>
 		
+		variables.tagAttributes = '';
+		variables.parameters = [];
+
 		/**
 		 * Set the name of the service tag to be invoked
 		 * @output false
@@ -63,7 +66,7 @@
 				if(structkeyexists(arguments,"1") and isstruct(arguments["1"]))
 				{
 						//include only relevant properties
-						for(var p in arguments["1"])
+						for(p in arguments["1"])
 						{
 							if(listcontainsnocase(variables.tagAttributes,p)){
 								temp[p] = arguments["1"][p];
@@ -203,7 +206,7 @@
 			var tagAttributes = {};
 			if(!structisempty(attribs))
 			{
-				for(var attrib in attribs)
+				for(attrib in attribs)
 				{
 					tagAttributes[attrib] = isSimpleValue(attribs[attrib]) ? trim(attribs[attrib]) : attribs[attrib];
 				}
@@ -264,6 +267,18 @@
 				{
 					arrayappend(variables.parameters, arguments);
 				}
+			}
+		}
+
+		public array function getParameters()
+		{
+			if(isdefined("variables.parameters"))
+			{
+				return variables.parameters;
+			}
+			else
+			{
+				return [];
 			}
 		}
 
