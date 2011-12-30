@@ -270,16 +270,14 @@
 			}
 		}
 
+
+		/**
+		 * Get array of parameters added using addParam()
+		 * @output false
+		 */
 		public array function getParameters()
 		{
-			if(isdefined("variables.parameters"))
-			{
-				return variables.parameters;
-			}
-			else
-			{
-				return [];
-			}
+			return variables.parameters;
 		}
 
 
