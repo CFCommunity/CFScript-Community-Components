@@ -66,7 +66,7 @@
 				if(structkeyexists(arguments,"1") and isstruct(arguments["1"]))
 				{
 						//include only relevant properties
-						for(p in arguments["1"])
+						for(var p in arguments["1"])
 						{
 							if(listcontainsnocase(variables.tagAttributes,p)){
 								temp[p] = arguments["1"][p];
@@ -206,7 +206,7 @@
 			var tagAttributes = {};
 			if(!structisempty(attribs))
 			{
-				for(attrib in attribs)
+				for(var attrib in attribs)
 				{
 					tagAttributes[attrib] = isSimpleValue(attribs[attrib]) ? trim(attribs[attrib]) : attribs[attrib];
 				}
