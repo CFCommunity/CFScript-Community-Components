@@ -10,9 +10,12 @@ component extends="mxunit.framework.TestCase" {
 			commandline.setName("date");
 			commandline.setArguments("+%Y-%m-%d-%H-%M-%S");
 			commandline.setTimeout(5);
-			var actual = commandline.execute().getResult().result;
+			var result = commandline.execute();
+			var actual = result.getResult().result;
 			var now = now();
 			var expected = DateFormat(now, "yyyy-mm-dd-") & TimeFormat(now, "HH-mm-ss");
+			AssertTrue(Len(result.getResult().result) > 0);
+			AssertTrue(Len(result.getResult().error) == 0);
 			AssertEquals(expected, actual);
 		}
 		else{
@@ -31,12 +34,9 @@ component extends="mxunit.framework.TestCase" {
 			var result = commandLine.execute();
 			AssertTrue(Len(result.getResult().result) == 0);
 			AssertTrue(Len(result.getResult().error) > 0);
-			
 			var actual = commandline.execute().getResult().error;
 			var expected = "ls: /null: No such file or directory";
 			AssertEquals(expected, actual);
-			
-			
 		}
 		else{
 			fail(variables.noTestError);
