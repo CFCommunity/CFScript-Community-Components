@@ -532,6 +532,25 @@
 				<cfset tagResult.setResult(feedResult)>
                 <cfreturn tagResult>
             </cfcase>
+            
+            <!--- cfexecute service --->
+			<cfcase value="CFEXECUTE">
+				<cfset var stdout = "" />
+				<cfset var stderr = "" />
+				<cfset tagAttributes.variable = "stdout" />
+				<cfset tagAttributes.errorVariable = "stderr" />  
+				
+				<cfset var resultSet = {} />
+			
+                <cfexecute attributeCollection="#tagAttributes#" />
+				<cfset resultSet.result = Trim(stdout) />
+				<cfset resultSet.error = Trim(stderr) />
+				
+				
+				<cfset tagResult.setResult(resultSet) />
+				
+				<cfreturn tagResult>
+			</cfcase>
 			
         	<!--- cfldap service --->
 			<cfcase value="CFLDAP">

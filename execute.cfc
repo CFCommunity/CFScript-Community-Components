@@ -105,7 +105,7 @@ component extends="base"
      * Invoke the cfexecute tag to provide the command line access in cfscript
      * @output true 
      */
-    public result function send()
+    public result function execute()
 	{
         //store tag attributes to be passed to the service tag in a local variable
 		var tagAttributes = duplicate(getTagAttributes());
@@ -125,8 +125,7 @@ component extends="base"
 		//trim attribute values
 		tagAttributes = trimAttributes(tagAttributes);
 
-		//invoke the cfhttp/cfhttpparam tags to perform the http service
-		return super.invokeTag(getTagName(),tagAttributes,{params=variables.parameters});
+		return super.invokeTag(getTagName(),tagAttributes);
     }
 
 	
