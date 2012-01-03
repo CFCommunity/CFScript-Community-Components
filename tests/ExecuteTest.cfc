@@ -1,6 +1,7 @@
 component extends="mxunit.framework.TestCase" {
 
 	variables.NixOSList = "Mac OS X";
+	variables.noTestError = "The platform [#server.os.name#] is not in the executeTest server list, or there are no tests written for it yet.";
 
 	public function testDate(){
 		var commandline = createObject("component", "CFScript-Community-Components.execute").init();
@@ -15,9 +16,32 @@ component extends="mxunit.framework.TestCase" {
 			AssertEquals(expected, actual);
 		}
 		else{
-			fail("The platform [#server.os.name#] is not in the executeTest server list, or there are no tests written for it yet.");	
+			fail(variables.noTestError);	
 		}	
 		
-	}	
+	}
+	
+	public function testExecuteError(){
+		var commandline = createObject("component", "CFScript-Community-Components.execute").init();
+		
+		if (ListFind(server.OS.name, variables.NixOSList) > 0){
+			commandline.setName("ls");
+			commandline.setArguments("/null");
+			commandline.setTimeout(5);
+			var result = commandLine.execute();
+			AssertTrue(Len(result.getResult().result) == 0);
+			AssertTrue(Len(result.getResult().error) > 0);
+			
+			var actual = commandline.execute().getResult().error;
+			var expected = "ls: /null: No such file or directory";
+			AssertEquals(expected, actual);
+			
+			
+		}
+		else{
+			fail(variables.noTestError);
+		}		
+		
+	}		
 
 }
