@@ -18,6 +18,9 @@
 
     <cfscript>
 		
+		variables.tagAttributes = '';
+		variables.parameters = [];
+
 		/**
 		 * Set the name of the service tag to be invoked
 		 * @output false
@@ -265,6 +268,16 @@
 					arrayappend(variables.parameters, arguments);
 				}
 			}
+		}
+
+
+		/**
+		 * Get array of parameters added using addParam()
+		 * @output false
+		 */
+		public array function getParameters()
+		{
+			return variables.parameters;
 		}
 
 
