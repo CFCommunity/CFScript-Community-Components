@@ -25,7 +25,6 @@ These are the tags that need to be ported over to script. Godspeed!
 * cfexchangefilter      
 * cfexchangemail 
 * cfexchangetask 
-* cfexecute 
 * cfinvoke (support for dynamic method names, please!)
 * cfmodule 
 * cfoutput (implementation of query looping with grouping)
