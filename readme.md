@@ -36,9 +36,6 @@ These are the tags that need to be ported over to script. Godspeed!
 
 * cfassociate    
 * cfcache        
-* cflogin 
-* cfloginuser 
-* cflogout 
 * cfprint      
 * cfsharepoint  
 * cftimer
@@ -47,6 +44,7 @@ These are the tags that need to be ported over to script. Godspeed!
 
 * cfgridupdate
 * cfinsert
+* cflogin 
 * cfobjectcache
 * cfreport
 * cfreportparam
