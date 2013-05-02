@@ -26,7 +26,7 @@
 		<cfargument name="name" required="true" />
 		<cfargument name="password" required="true" />
 		<cfargument name="roles" required="true" />
-		<cfloginuser name="#arguments.name#" password="#arguments.password#" roles="#arguments.roles#" />
+		<cflogin><cfloginuser name="#arguments.name#" password="#arguments.password#" roles="#arguments.roles#" /></cflogin>
 	</cffunction>
 
 </cfcomponent>
