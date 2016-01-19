@@ -65,7 +65,7 @@ component extends="base"
      * Initialization routine. Returns an instance of this component
      * @output false
      */
-    public com.adobe.coldfusion.query function init()
+    public any function init()
     {
         if(!structisempty(arguments))
         {        
