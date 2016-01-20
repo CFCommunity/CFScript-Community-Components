@@ -19,32 +19,30 @@ These are the tags that need to be ported over to script. Godspeed!
 
 ## Significant omissions:
 
-* cfexchangecalendar    
-* cfexchangeconnection  
-* cfexchangecontact      
-* cfexchangefilter      
-* cfexchangemail 
-* cfexchangetask 
-* cfinvoke (support for dynamic method names, please!)
-* cfmodule 
+* cfexchangecalendar
+* cfexchangeconnection
+* cfexchangecontact
+* cfexchangefilter
+* cfexchangemail
+* cfexchangetask
+* cfmodule
 * cfoutput (implementation of query looping with grouping)
 * cfparam (fix the bug in that enforced requiredness doesn’t work (ie: param name="foo";))
 * cfquery (cachedwithin support)
 
 ## Reasonable case
 
-* cfassociate    
-* cfcache        
-* cfprint      
-* cfsharepoint  
+* cfassociate
+* cfcache
+* cfprint
+* cfsharepoint
 * cftimer
 
 ## Ambivalent
 
 * cfgridupdate
 * cfinsert
-* cflogin 
-* cfobjectcache
+* cflogin
 * cfreport
 * cfreportparam
 * cfupdate
